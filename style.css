@@ -1,0 +1,28 @@
+#animatedBtn {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: lightblue;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+#animatedBtn.clicked {
+  transform: scale(1.2);
+  background-color: lightgreen;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.clicked {
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  animation: bgAnimation 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes bgAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
